@@ -1,0 +1,13 @@
+.container {
+    width: 20%;
+}
+
+.beginner table {
+    color: lightgoldenrodyellow;
+}
+
+.category {
+    background-color: white;
+    color: red;
+    border: 1pt;
+}

@@ -1,10 +1,20 @@
 import { Component } from '@angular/core';
+import { COURSES } from './data/data';
+import { Course } from './model/course';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'angular-course-2';
+  courses = COURSES;
+
+  componentCalled(course:Course) {
+    alert("Component Called - " + course.title + course.description);
+  }
+
 }
+
+
