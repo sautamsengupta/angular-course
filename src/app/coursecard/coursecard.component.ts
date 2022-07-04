@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AfterContentInit, Component, ContentChild, ElementRef, EventEmitter, Input, OnInit, Output, TemplateRef } from '@angular/core';
 import { Course } from '../model/course';
 
 @Component({
@@ -6,15 +6,28 @@ import { Course } from '../model/course';
   templateUrl: './coursecard.component.html',
   styleUrls: ['./coursecard.component.css']
 })
-export class CoursecardComponent implements OnInit {
+export class CoursecardComponent implements OnInit, AfterContentInit {
 
   constructor() { }
+
+  ngAfterContentInit(): void {
+    
+  }
 
   @Input()
   course!: Course;
 
   @Output()
   emitCourseToComponent = new EventEmitter<string>();
+
+  @ContentChild('contentprojection')
+  contentprojection!:ElementRef;
+
+  @Input()
+  calculateTemplate!:TemplateRef<any>;
+
+  @Input()
+  textValue!:string;
 
   ngOnInit(): void {
   }

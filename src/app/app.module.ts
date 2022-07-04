@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CoursecardComponent } from './coursecard/coursecard.component';
+import { HighlightedDirective } from './directive/highlighted.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CoursecardComponent
+    CoursecardComponent,
+    HighlightedDirective
   ],
   imports: [
     BrowserModule

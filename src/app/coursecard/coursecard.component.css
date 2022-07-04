@@ -1,5 +1,5 @@
 .container {
-    width: 20%;
+    width: 400PX;
 }
 
 .beginner table {
@@ -11,3 +11,11 @@
     color: red;
     border: 1pt;
 }
+
+.highlighted {
+    color: red;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 16px 0 #2c1818, 0 3px 8px 0 rgba(226, 21, 19, 0.47), 0 6px 8px -1px #b41c18;
+    width: 300px;
+  }
